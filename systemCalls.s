@@ -4,7 +4,10 @@
 str:
     .asciiz "the answer = "
     .text
-    li		$v0, 4		    # System call code for print_str        # $v0 = 4
+    .globl main
+
+
+main:    li		$v0, 4		    # System call code for print_str        # $v0 = 4
     la		$a0, str		# Address of string to pring
     syscall
 
